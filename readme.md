@@ -39,4 +39,5 @@ cargo run --bin benchmark --release
 ```
 
 ## **Notes**
-As usually done, this radon transform only computes rays with angles going from -pi/4 to pi/4 for numerically stable slopes. In order to compute the complete radon transform, apply the transpose on the transposed image and merge the split transforms.
+1. As usually done, this radon transform only computes rays with angles going from -pi/4 to pi/4 for numerically accurate integration along slopes. In order to compute the complete radon transform, apply the transform on the transposed image and merge the split transforms.
+2. The integration is computed using the nearest method.
