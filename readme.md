@@ -6,6 +6,12 @@ Implementation of the **[Radon transform](https://backend.orbit.dtu.dk/ws/portal
 
 The main goal of this repository is to benchmark an algorithmically identical implementation of the Radon transform in Python and Rust.
 
+See [pyradon](https://github.com/alelouis/pyradon) for Python binding of this implementation.
+
+<p align="center">
+  <img width="80%" src="./figures/radon_transform.png" alt="animated" />
+</p>
+
 ## **Benchmark**
 
 ```
