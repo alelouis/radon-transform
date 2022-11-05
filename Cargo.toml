@@ -7,3 +7,7 @@ edition = "2021"
 
 [dependencies]
 csv = "1.1"
+
+[[bin]]
+name = "benchmark"
+path = "src/benchmark.rs"
