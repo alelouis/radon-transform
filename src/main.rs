@@ -3,10 +3,14 @@ mod csv_rw;
 mod radon;
 
 fn main() {
-    let n_rows = 100_usize;
-    let n_cols = 100_usize;
-    let input_path = "input.csv".to_string();
-    let g = csv_rw::read_csv(input_path).expect("Error reading input.");
-    let g_radon = radon::radon(g, n_rows, n_cols);
-    csv_rw::write_csv(g_radon, "rust_output.csv".to_string()).expect("Error writing output csv.");
+    let n_rows = 512_usize;
+    let n_cols = 512_usize;
+    let n_rays = 200_usize;
+    let n_slopes = 200_usize;
+
+    let input_path = "lena.csv".to_string();
+    let image = csv_rw::read_csv(input_path).expect("Error reading input.");
+    let radon_transform = radon::radon(&image, n_rows, n_cols, n_rays, n_slopes);
+    csv_rw::write_csv(radon_transform, "rust_output.csv".to_string())
+        .expect("Error writing output csv.");
 }
