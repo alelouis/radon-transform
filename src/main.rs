@@ -5,8 +5,8 @@ mod radon;
 fn main() {
     let n_rows = 512_usize;
     let n_cols = 512_usize;
-    let n_rays = 1000_usize;
-    let n_slopes = 1000_usize;
+    let n_rays = 500_usize;
+    let n_slopes = 500_usize;
 
     let input_path = "inputs/lena.csv".to_string();
     let image = csv_rw::read_csv(input_path).expect("Error reading input.");

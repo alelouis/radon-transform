@@ -12,7 +12,7 @@ n_slopes = 200
 image = np.loadtxt("../inputs/lena.csv", delimiter = ',')
 
 # Benchmark loop
-n_trials = 5
+n_trials = 10
 times = [0.] * n_trials
 for idx in range(n_trials):
     t_start = perf_counter()
