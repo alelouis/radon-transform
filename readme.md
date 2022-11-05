@@ -6,7 +6,7 @@ Implementation of the **[Radon transform](https://backend.orbit.dtu.dk/ws/portal
 
 The main goal of this repository is to benchmark an algorithmically identical implementation of the Radon transform in Python and Rust.
 
-See [pyradon](https://github.com/alelouis/pyradon) for Python binding of this implementation.
+See [pyradon](https://github.com/alelouis/pyradon) for Python bindings of this implementation.
 
 <p align="center">
   <img width="80%" src="./figures/radon_transform.png" alt="animated" />
@@ -37,3 +37,6 @@ cd py & python benchmark.py
 ```bash
 cargo run --bin benchmark --release
 ```
+
+## **Notes**
+As usually done, this radon transform only computes rays with angles going from -pi/4 to pi/4 for numerically stable slopes. In order to compute the complete radon transform, apply the transpose on the transposed image and merge the split transforms.
